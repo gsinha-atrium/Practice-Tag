@@ -10,7 +10,7 @@ global class BatchRecordCreator implements Database.Batchable<sObject> {
     }
 
     global void execute(Database.BatchableContext context, List<sObject> batchRecords) {
-        insert batchRecords;
+        upsert batchRecords;
     }
 
     global void finish(Database.BatchableContext context) {
